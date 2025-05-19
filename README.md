@@ -142,10 +142,13 @@ email-organizer/
 ### config.json File
 ```json
 {
-    "rules": {
-        "Work": ["meeting", "project", "deadline"],
-        "Personal": ["family", "friends", "vacation"],
-        "Shopping": ["order", "invoice", "confirmation"]
+    "Security": {
+        "description": "Emails related to security, authentication, passwords, access and data protection",
+        "created_at": "2025-05-19T18:25:04.671596"
+    },
+    "Marketing": {
+        "description": "Marketing emails, newsletters, promotions, special offers and commercial communications",
+        "created_at": "2025-05-19T18:25:15.478355"
     },
     "settings": {
         "max_emails_to_process": 50,
