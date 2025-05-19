@@ -1,0 +1,67 @@
+{
+    "rules": {
+        "Password e Accessi": [
+            "password", "accesso", "login", "account", "credenziali", "autenticazione", 
+            "sicurezza", "verifica", "codice", "pin", "cambio password", "reset", 
+            "conferma identità", "autenticazione a due fattori", "2fa", "one-time password",
+            "otp", "token", "accedi", "accesso sicuro", "modifica password", "recupero password",
+            
+            "access", "credentials", "authentication", "security", "verify", "code", 
+            "password change", "password reset", "identity confirmation", "two-factor authentication",
+            "login attempt", "secure login", "password update", "password recovery", 
+            "sign in", "sign-in", "authentication code", "verification", "secure access", 
+            "your credentials", "security alert"
+        ],
+        "Acquisti Online": [
+            "ordine", "acquisto", "conferma ordine", "spedizione", "pacco", "tracking", 
+            "tracciamento", "fattura", "ricevuta", "rimborso", "reso", "pagamento", 
+            "amazon", "ebay", "zalando", "shop", "store", "negozio", "articolo",
+            "prodotto", "consegna", "corriere", "acquistato", "carrello", "checkout",
+            "transazione", "carta di credito", "paypal", "bonifico", "costo",
+            
+            "order", "purchase", "order confirmation", "shipping", "package", "track", 
+            "tracking number", "invoice", "receipt", "refund", "return", "payment", 
+            "item", "product", "delivery", "courier", "purchased", "cart", "shopping cart",
+            "transaction", "credit card", "debit card", "bank transfer", "cost", "price",
+            "shipment", "order status", "order shipped", "your order", "dispatch", 
+            "delivery confirmation", "online purchase", "Amazon", "Ebay", "Zalando", 
+            "Shop", "Store", "Negozio", "Articolo", "Prodotto", "Consegna", "Corriere",
+            "Acquistato", "Carrello", "Checkout", "Transazione", "Carta di Credito",
+            "Bonifico", "Costo", "Ordine", "Conferma Ordine", "Spedizione",
+            "Pacco", "Tracking", "Tracciamento", "Fattura", "Ricevuta", "Rimborso",
+            "Reso", "Pagamento"
+        ],
+        "Pubblicità": [
+            "offerta", "sconto", "promozione", "newsletter", "marketing", "speciale",
+            "novità", "saldi", "occasione", "risparmia", "limited", "esclusivo", 
+            "coupon", "codice sconto", "flash sale", "black friday", "cyber monday",
+            "scopri", "non perdere", "approfittane", "pubblicità", "promo", "campagna",
+            "inaugurazione", "evento speciale", "lancio", "unsubscribe", "cancellati",
+            
+            "offer", "discount", "promotion", "special", "news", "sale", "opportunity", 
+            "save", "limited time", "exclusive", "discount code", "deal", "discover", 
+            "don't miss", "take advantage", "advertisement", "advert", "ad", "campaign", 
+            "grand opening", "special event", "launch", "limited offer", "best price", 
+            "save money", "free shipping", "unsubscribe", "opt out", "email preferences",
+            "subscription", "weekly deals", "hot deals", "prime", "prime video", "explore"
+        ],
+        "Personale": [
+            "personale", "famiglia", "amici", "vacanza", "viaggio", "appuntamento",
+            "compleanno", "auguri", "invito", "festa", "cena", "ristorante", 
+            "prenotazione", "ricordo", "evento", "incontro", "ciao", "saluti",
+            "carissimo", "carissima", "grazie", "piacere", "ci vediamo", "come stai",
+            "uniba", "esame",
+            
+            "personal", "family", "friends", "holiday", "vacation", "trip", "appointment", 
+            "birthday", "wishes", "invitation", "party", "dinner", "restaurant", 
+            "reservation", "reminder", "event", "meeting", "hello", "hi", "greetings", 
+            "dear", "thank you", "thanks", "pleasure", "see you", "how are you",
+            "best regards", "regards", "sincerely", "congrats", "congratulations"
+        ]
+    },
+    "settings": {
+        "max_emails_to_process": 300,
+        "check_body": true,
+        "body_extract_length": 1200
+    }
+} 

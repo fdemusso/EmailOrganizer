@@ -1,0 +1,30 @@
+# File delle credenziali Google
+client_secret*.json
+*client_secret*.json
+google_credentials.json
+
+# File di token di autenticazione
+token.pickle
+*.pickle
+
+# Directory di ambiente Python
+venv/
+env/
+.env/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Directory di IDE e editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# File di log
+*.log
+
+# File temporanei di sistema
+.DS_Store
+Thumbs.db 

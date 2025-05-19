@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  email-organizer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: email-organizer
+    volumes:
+      # Monta il file delle credenziali
+      - ./google_credentials.json:/app/google_credentials.json
+      # Monta una directory per i token persistenti
+      - ./data:/app/data
+    environment:
+      - TOKEN_DIR=/app/data
+    ports:
+      # Necessario per l'autenticazione OAuth
+      - "8080:8080"
+    # Modalità interattiva per il browser di autenticazione
+    stdin_open: true
+    tty: true
