@@ -1,55 +1,150 @@
 # Email Organizer
 
-Un programma Python che automatizza l'organizzazione delle tue email di Gmail utilizzando le API di Google.
+A Python application to automatically organize Gmail emails into custom categories. Available in two versions: with and without artificial intelligence.
 
-## ⚠️ Importante: Credenziali OAuth
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Gmail API](https://img.shields.io/badge/Gmail-API-red.svg)
+![Ollama](https://img.shields.io/badge/Ollama-Gemma3:12b-orange.svg)
 
-Per utilizzare questa applicazione, è necessario ottenere le proprie credenziali OAuth da Google:
+## 📋 Overview
 
-1. Vai alla [Google Cloud Console](https://console.cloud.google.com/)
-2. Crea un nuovo progetto o seleziona uno esistente
-3. Abilita l'API Gmail per il tuo progetto
-4. Nella sezione "Credenziali", crea nuove credenziali OAuth 2.0
-5. Scarica il file JSON delle credenziali
-6. Rinomina il file scaricato in `google_credentials.json` e posizionalo nella directory principale del progetto
+Email Organizer is an application that helps you keep your Gmail inbox automatically organized. It's available in two versions:
 
-**NOTA**: Non utilizzare le credenziali di altri utenti. Ogni utente deve generare le proprie credenziali OAuth per motivi di sicurezza.
+### 🤖 AI Version (Email_IA.py)
+Uses artificial intelligence (Gemma 3 12B model from Ollama) to analyze email content and categorize it intelligently. Ideal for those who want more sophisticated and adaptive categorization.
 
-## Caratteristiche
+### 📝 Standard Version (Email_NoIA.py)
+Uses predefined rules based on keywords to categorize emails. Lighter and faster, ideal for those who prefer more direct control over categorization.
 
-- Accesso sicuro all'account Gmail tramite OAuth 2.0
-- Categorizzazione automatica delle email in base a parole chiave
-- Categorie predefinite: Password e Accessi, Acquisti Online, Pubblicità, Personale
-- Configurazione personalizzabile tramite file JSON
-- Analisi del contenuto dell'email (oggetto, mittente e corpo)
-- Statistiche di elaborazione al termine
+## ✨ Features
 
-## Requisiti
+### Common to Both Versions
+- Gmail API Integration
+- Custom Label System
+- Flexible Configuration
+- Detailed Logging
+- Docker Support
 
-- Python 3.6 o superiore
-- Un account Gmail
-- Credenziali OAuth 2.0 per le API di Gmail
+### AI Version Specific
+- AI-based Categorization
+- Continuous Learning
+- Semantic Content Analysis
+- Automatic Category Management
 
-## Installazione
+### Standard Version Specific
+- Rule-based Categorization
+- Precise Category Control
+- Optimized Performance
+- No External AI Dependencies
 
-1. Clona o scarica questo repository
-2. Installa le dipendenze richieste:
+## 🚀 Installation
 
+### Prerequisites
+- Python 3.9 or higher
+- Gmail Account
+- Google API Credentials
+- Docker (optional)
+
+### Google Cloud Setup
+1. Go to [Google Cloud Console](https://console.cloud.google.com)
+2. Create a new project
+3. Enable Gmail API
+4. Create OAuth 2.0 credentials
+5. Download the `google_credentials.json` file
+
+### Docker Installation (Recommended)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/tuousername/email-organizer.git
+cd email-organizer
+```
+
+2. Choose the version to use:
+   - For AI version: `cd IA`
+   - For Standard version: `cd No_IA`
+
+3. Place configuration files:
+   - `google_credentials.json`
+   - `config.json`
+
+4. Start the application:
+```bash
+docker-compose up --build
+```
+
+### Local Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/tuousername/email-organizer.git
+cd email-organizer
+```
+
+2. Choose the version to use:
+   - For AI version: `cd IA`
+   - For Standard version: `cd No_IA`
+
+3. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Configurazione
+5. For AI version, install Ollama:
+   - Follow instructions at [ollama.com](https://ollama.com)
 
-Il file `config.json` contiene le regole per la categorizzazione delle email e le impostazioni generali:
+6. Place configuration files:
+   - `google_credentials.json`
+   - `config.json`
 
+7. Run the application:
+```bash
+# For AI version
+python Email_IA.py
+
+# For Standard version
+python Email_NoIA.py
+```
+
+## 📁 Project Structure
+
+```
+email-organizer/
+├── IA/                    # AI Version
+│   ├── Email_IA.py
+│   ├── categories.json
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── README.md
+│
+├── No_IA/                 # Standard Version
+│   ├── Email_NoIA.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── README.md
+│
+└── README.md             # This file
+```
+
+## ⚙️ Configuration
+
+### config.json File
 ```json
 {
     "rules": {
-        "Password e Accessi": ["password", "login", "..."],
-        "Acquisti Online": ["ordine", "acquisto", "..."],
-        "Pubblicità": ["offerta", "sconto", "..."],
-        "Personale": ["personale", "famiglia", "..."]
+        "Work": ["meeting", "project", "deadline"],
+        "Personal": ["family", "friends", "vacation"],
+        "Shopping": ["order", "invoice", "confirmation"]
     },
     "settings": {
         "max_emails_to_process": 50,
@@ -59,72 +154,32 @@ Il file `config.json` contiene le regole per la categorizzazione delle email e l
 }
 ```
 
-Puoi modificare questo file per aggiungere nuove categorie o parole chiave, o per cambiare le impostazioni.
+## 📊 Usage
 
-## Utilizzo
+1. On first run, a browser will open for Google authentication
+2. The application will start processing uncategorized emails
+3. Emails will be automatically categorized and labeled in Gmail
 
-Esegui il programma con il comando:
+## 🔍 Version Differences
 
-```bash
-python email_organizer.py
-```
+| Feature | AI Version | Standard Version |
+|---------|------------|------------------|
+| Categorization | AI-based | Predefined rules |
+| Performance | Slower | Faster |
+| Resources | Higher | Lower |
+| Flexibility | High | Medium |
+| Control | Low | High |
 
-Al primo avvio, ti verrà richiesto di autorizzare l'accesso al tuo account Gmail. Si aprirà una finestra del browser per effettuare l'accesso. Dopo l'autorizzazione, verrà creato un file `token.pickle` che memorizzerà le credenziali per gli avvii successivi.
+## 🤝 Contributing
 
-## Come funziona
+Contributions are welcome! Please read the contribution guidelines before submitting a pull request.
 
-1. Il programma si connette alle API di Gmail utilizzando le credenziali OAuth 2.0
-2. Recupera un numero specificato di email dalla tua casella di posta
-3. Per ogni email, analizza l'oggetto, il mittente e il corpo
-4. Verifica se contengono parole chiave corrispondenti alle categorie definite
-5. Applica l'etichetta appropriata alle email che corrispondono a una categoria
-6. Visualizza statistiche sull'elaborazione al termine
+## 📝 License
 
-## Personalizzazione
+This project is distributed under the MIT License. See the `LICENSE` file for more details.
 
-Puoi personalizzare il comportamento del programma modificando il file `config.json`:
+## 🙏 Acknowledgments
 
-- Aggiungere nuove categorie
-- Aggiungere o rimuovere parole chiave per ogni categoria
-- Modificare il numero di email da elaborare
-- Attivare o disattivare l'analisi del corpo dell'email
-- Cambiare la lunghezza massima del corpo dell'email da analizzare
-
-## Utilizzo con Docker
-
-Per una maggiore portabilità e facilità di distribuzione, puoi eseguire l'applicazione utilizzando Docker.
-
-### Prerequisiti
-
-- Docker e Docker Compose installati sul tuo sistema
-
-### Passaggi per l'esecuzione
-
-1. **Costruisci il container**:
-   ```bash
-   docker-compose build
-   ```
-
-2. **Esegui l'applicazione**:
-   ```bash
-   docker-compose up
-   ```
-
-3. **Al primo avvio**:
-   - Si aprirà un server di autenticazione sulla porta 8080
-   - Segui le istruzioni per autorizzare l'applicazione
-   - Le credenziali verranno salvate nella directory `./data` per utilizzi futuri
-
-### Note importanti
-
-- Il container monta automaticamente il file di credenziali `google_credentials.json`
-- I token di autenticazione vengono salvati nella directory `./data` per persistere tra le esecuzioni
-- Per modificare la configurazione, puoi editare il file `config.json` prima di costruire il container
-
-### Variabili d'ambiente
-
-Puoi personalizzare l'esecuzione del container con le seguenti variabili d'ambiente:
-
-- `TOKEN_DIR`: Directory in cui salvare/cercare i token (default: `/app/data`)
-- `CONFIG_PATH`: Percorso del file di configurazione (default: `/app/config.json`)
-- `CLIENT_SECRET_PATH`: Percorso del file delle credenziali (default: `/app/google_credentials.json`) 
+- Google for the Gmail API
+- Ollama for the Gemma 3 12B model
+- All project contributors 

@@ -1,0 +1,42 @@
+{
+    "Security": {
+        "description": "Emails related to security, authentication, passwords, access and data protection",
+        "created_at": "2025-05-19T18:25:04.671596"
+    },
+    "Marketing": {
+        "description": "Marketing emails, newsletters, promotions, special offers and commercial communications",
+        "created_at": "2025-05-19T18:25:15.478355"
+    },
+    "Travel": {
+        "description": "Emails related to bookings, itineraries, tickets, hotels, flights and travel information",
+        "created_at": "2025-05-19T18:25:39.308050"
+    },
+    "Management": {
+        "description": "Emails related to project management, administration, human resources and business processes",
+        "created_at": "2025-05-19T18:25:47.434893"
+    },
+    "Work": {
+        "description": "Emails related to work communications, meetings, projects, collaborations and professional activities",
+        "created_at": "2025-05-19T18:26:05.501620"
+    },
+    "Purchases": {
+        "description": "Emails related to online orders, purchase confirmations, shipping, invoices and returns",
+        "created_at": "2025-05-19T18:26:05.501620"
+    },
+    "Support": {
+        "description": "Emails related to technical support, customer service, tickets, help requests and problem resolution",
+        "created_at": "2025-05-19T18:26:05.501620"
+    },
+    "Entertainment": {
+        "description": "Video streaming services, music, podcasts and other entertainment content",
+        "created_at": "2025-05-19T18:29:01.757280"
+    },
+    "Health": {
+        "description": "Emails related to health, medicine, diets, exercise and medical information",
+        "created_at": "2025-05-19T18:29:01.757280"
+    },
+    "Other": {
+        "description": "Emails that cannot be categorized into other categories",
+        "created_at": "2025-05-19T18:29:01.757280"
+    }
+}

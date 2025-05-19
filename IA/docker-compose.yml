@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  email-organizer:
+    build: .
+    volumes:
+      - ./tokens:/app/tokens
+      - ./config.json:/app/config.json
+      - ./google_credentials.json:/app/google_credentials.json
+    environment:
+      - TOKEN_DIR=/app/tokens
+      - CONFIG_PATH=/app/config.json
+    ports:
+      - "8080:8080"  # Per l'autenticazione OAuth 
