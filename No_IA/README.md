@@ -48,7 +48,7 @@ A Python application that uses predefined rules to automatically organize Gmail 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer/No_IA
 ```
 
@@ -65,7 +65,7 @@ docker-compose up --build
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer/No_IA
 ```
 
