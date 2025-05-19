@@ -2,6 +2,19 @@
 
 Un programma Python che automatizza l'organizzazione delle tue email di Gmail utilizzando le API di Google.
 
+## ⚠️ Importante: Credenziali OAuth
+
+Per utilizzare questa applicazione, è necessario ottenere le proprie credenziali OAuth da Google:
+
+1. Vai alla [Google Cloud Console](https://console.cloud.google.com/)
+2. Crea un nuovo progetto o seleziona uno esistente
+3. Abilita l'API Gmail per il tuo progetto
+4. Nella sezione "Credenziali", crea nuove credenziali OAuth 2.0
+5. Scarica il file JSON delle credenziali
+6. Rinomina il file scaricato in `google_credentials.json` e posizionalo nella directory principale del progetto
+
+**NOTA**: Non utilizzare le credenziali di altri utenti. Ogni utente deve generare le proprie credenziali OAuth per motivi di sicurezza.
+
 ## Caratteristiche
 
 - Accesso sicuro all'account Gmail tramite OAuth 2.0
