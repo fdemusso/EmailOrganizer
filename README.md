@@ -3,7 +3,7 @@
 A Python application to automatically organize Gmail emails into custom categories. Available in two versions: with and without artificial intelligence.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Gmail API](https://img.shields.io/badge/Gmail-API-red.svg)
 ![Ollama](https://img.shields.io/badge/Ollama-Gemma3:12b-orange.svg)
 
@@ -129,6 +129,7 @@ email-organizer/
 ├── No_IA/                 # Standard Version
 │   ├── Email_NoIA.py
 │   ├── requirements.txt
+│   ├── config.json
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── README.md
@@ -176,7 +177,7 @@ Contributions are welcome! Please read the contribution guidelines before submit
 
 ## 📝 License
 
-This project is distributed under the MIT License. See the `LICENSE` file for more details.
+This project is distributed under the Apache License 2.0. See the `LICENSE` file for more details.
 
 ## 🙏 Acknowledgments
 

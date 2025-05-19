@@ -122,4 +122,4 @@ Logs are saved in the `email_organizer.log` file in the No_IA directory.
 
 ## License
 
-MIT 
+Apache License 2.0 
