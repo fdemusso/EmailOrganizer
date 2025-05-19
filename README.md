@@ -57,7 +57,7 @@ Uses predefined rules based on keywords to categorize emails. Lighter and faster
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/tuousername/email-organizer.git
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer
 ```
 
@@ -78,7 +78,7 @@ docker-compose up --build
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/tuousername/email-organizer.git
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer
 ```
 
