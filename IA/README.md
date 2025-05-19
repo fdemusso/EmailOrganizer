@@ -44,7 +44,7 @@ A Python application that uses artificial intelligence to automatically organize
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer/IA
 ```
 
@@ -61,7 +61,7 @@ docker-compose up --build
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tuousername/email-organizer.git](https://github.com/fdemusso/EmailOrganizer.git
 cd email-organizer/IA
 ```
 
