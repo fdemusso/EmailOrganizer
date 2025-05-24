@@ -30,12 +30,15 @@ class AICategorizer:
         ram = psutil.virtual_memory()
 
         self.model_name = "gemma3:12b"
-        
+
 
         if ram.available < 9 * 1024**3:
             print(f"There isn't enough ram to use {self.model_name}")
             print(f"You got: {ram.available / 1024**3:.2f} GB of {ram.total / 1024**3:.2f} GB free and you'll need at least 8.3 GB free")
-            return
+            rs = input("Did you wanna force the Email_IA.py run anyway? (y/n): ")
+            if rs != 'y':
+                return
+            
             
         self.categories = self._load_categories()
         self.max_iterations = 5
