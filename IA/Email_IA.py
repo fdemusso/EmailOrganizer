@@ -9,6 +9,7 @@ import tempfile
 from datetime import datetime
 import base64
 import ollama
+import psutil
 import subprocess
 from tqdm import tqdm
 import logging
@@ -26,7 +27,16 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 class AICategorizer:
     def __init__(self):
         self.categories_file = os.path.join(os.path.dirname(__file__), 'categories.json')
+        ram = psutil.virtual_memory()
+
         self.model_name = "gemma3:12b"
+        
+
+        if ram.available < 9 * 1024**3:
+            print(f"There isn't enough ram to use {self.model_name}")
+            print(f"You got: {ram.available / 1024**3:.2f} GB of {ram.total / 1024**3:.2f} GB free and you'll need at least 8.3 GB free")
+            return
+            
         self.categories = self._load_categories()
         self.max_iterations = 5
         self.tool_commands = {
